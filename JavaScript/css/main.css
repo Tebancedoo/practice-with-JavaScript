@@ -1,0 +1,33 @@
+body{
+    background-color: #0d1323;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    /*color: aliceblue;*/
+}
+
+h1{
+    text-align: center;
+    color: #cad2d5;
+    margin-top: 20%;
+}
+
+p{
+    text-align: center;
+    color: #92a7bc;
+    margin-top: 5%;
+
+}
+.contenido{
+    color: #cad2d5;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 2.5rem;
+
+
+
+}
+
+
+
+
+
+    
