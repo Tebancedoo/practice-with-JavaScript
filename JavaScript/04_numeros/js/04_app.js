@@ -80,10 +80,29 @@ for (var i = 0; i < 9; i++) {
 }
 
 
-/*While*/ 
+/*While: Crea un bucle que ejecuta una sentencia especificada mientras cierta 
+condición se evalúe como verdadera */ 
+
+n = 0;
+x = 0;
+while (n < 3) {
+  n++;
+  x += n;
+}
 
 
-/*do while*/
+/*Do while: Crea un bucle que ejecuta una declaración especificada hasta que la condición 
+de prueba se evalúa como falsa*/
+
+let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
 
 
 
