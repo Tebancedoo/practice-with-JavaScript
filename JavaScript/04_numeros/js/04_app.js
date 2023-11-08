@@ -37,9 +37,27 @@ myCar.year = 1969;
 
 
 /*Funciones: Las funciones son un conjunto de bloques que realizan determinada acción */
+function square(number){
+    return number * number;
+}
 
+/*Array: Los array o arreglos son similares a una lista cuyo protoripo proporciona métodos para efectuar operaciones
+de recorrido y de mutación*/
 
-//array - if - switch - for - while - do while
+let frutas = ["Manzana","Melon","Kiwi","Mamoncillo"];
+//console.log(frutas.length);
+
+/*If: El if es un metodo de decisión el cual evalua si una condicion es verdadera, de ser asi ejecuta un fragmeto de codigo,
+de ser falsa, ejecuta otro*/
+
+var b = "false";
+
+if (b == "true"){
+    console.log("Es verdadero");
+}else
+    console.log ("Es falso");
+
+//switch //for //while //do while
 
 
 
