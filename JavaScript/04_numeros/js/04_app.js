@@ -27,7 +27,19 @@ if(autenticado){
 }//operador ternario
 
 console.log(autenticado ? 'Si esta autenticado' : 'No esta autenticado');
-//objeto - funciones - array - if - switch - for - while - do while
+/*Objeto: Un objeto en Java Script es una entidad independiente con propiedades y tipos
+(un objeto del mundo real)*/ 
+
+var myCar= new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+myCar.year = 1969;
+
+
+/*Funciones: Las funciones son un conjunto de bloques que realizan determinada acción */
+
+
+//array - if - switch - for - while - do while
 
 
 
