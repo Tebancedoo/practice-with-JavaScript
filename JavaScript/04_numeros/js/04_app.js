@@ -57,7 +57,33 @@ if (b == "true"){
 }else
     console.log ("Es falso");
 
-//switch //for //while //do while
+/*Switch:El switch compara el valor con una serie de case (casos) y ejecuta el que concida */
+
+const expr = 'Papayas';
+switch (expr) {
+  case 'Naranjas':
+    console.log('Naranjas son $0.59 .');
+    break;
+  case 'Mangos':
+  case 'Papayas':
+    console.log('Mangos y papayas son $2.79 .');
+    break;
+  default:
+    console.log(`Lo siento la expresion no es validad:  ${expr}.`);
+}
+
+/*For: Es un bucle que consisten en tres expreciones opcionales*/
+
+for (var i = 0; i < 9; i++) {
+  n += i;
+  mifuncion(n);
+}
+
+
+/*While*/ 
+
+
+/*do while*/
 
 
 
