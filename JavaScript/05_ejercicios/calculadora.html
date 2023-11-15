@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+
+    <script>
+        let val1 = prompt("Ingrese un numero");
+        let val2 = prompt("Ingrese otro numero");
+        v1 = parseInt (val1);
+        v2 = parseInt (val2);
+        let operacion = prompt("1. Para sumar, 2. Para restar, 3. Para multiplicar, 4. Para dividir");
+
+        switch (operacion){
+            case "1":
+            var res = v1 + v2;
+            window.alert("Usted eligio la opcion suma");
+            document.write("El resultado de la suma es: " + res);
+            break;
+
+            case "2":
+            var res = v1 - v2;
+            window.alert("Usted eligio la opcion resta");
+            document.write("El resultado de la resta es: " + res);
+            break;
+
+            case "3":
+            var res = v1 * v2;
+            window.alert("Usted eligio la opcion multiplicacion");
+            document.write("El resultado de la multiplicacion es: " + res);
+            break;
+
+            case "4":
+            var res = v1 / v2;
+            window.alert("Usted eligio la opcion division");
+            document.write("El resultado de la division es: " + res);
+            break;
+
+
+        }
+
+    </script>
+</body>
+</html>

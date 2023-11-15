@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabla multiplicar</title>
 </head>
 <body>
     
-<!--con estilos y en una tabla -->
+
+<div>
+
+<table>
+    <tbody>Tabla de multiplicar</tbody>
+    <br><br>
+
+    <thead>
+        <script>
+
+        let valor = prompt("Ingrese un numero para sacarle, la tabla de multiplicar");
+        v = parseInt (valor);
+        window.alert("La tabla de multiplicar del numero: " + v + " es: ");
+
+
+        for (var i = 0; i <= 10; i++) {
+        r = v * i ;
+        document.write(" " + v + " * " + i + " = " + r + " <br> ");
+        }
+
+
+        </script>
+    </thead>
+</table>
+</div>
 
 </body>
+<style>
+
+*{
+    font-size: 25px;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background-color: #02a5a5;
+}
+
+table{
+
+    align-items: center;
+    text-align: center;
+
+
+}
+div{
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    color: #ffffff;
+    border-radius: 8px;
+    /*box-shadow: 10px 5px 5px black;*/
+
+}
+
+</style>
 </html>
