@@ -8,10 +8,28 @@
 </head>
 <body>
 
-<script>
+        <div> 
 
-    
-</script>
-    
+    <script>
+
+            const notas = prompt("Ingrese el numero de notas: ");
+            v1 = parseInt (notas);
+            for (var i = 1; i <= v1; i++) {
+            operacion = prompt("Ingrese la nota " + i + ": ");
+            v2 = parseFloat (operacion);
+            v2 = (v2 + v2);//arreglar el acumilador
+
+            
+            }
+            const resultado = (v2 / v1);
+           
+            document.write("El promedio de las notas es: " + resultado);
+            document.write("<br>" + v2);
+            
+
+        
+    </script>
+        </div>
+
 </body>
 </html>
