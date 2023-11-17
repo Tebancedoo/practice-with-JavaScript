@@ -14,17 +14,19 @@
 
             const notas = prompt("Ingrese el numero de notas: ");
             v1 = parseInt (notas);
+            var operacion;
+            var v2 = 0;
             for (var i = 1; i <= v1; i++) {
             operacion = prompt("Ingrese la nota " + i + ": ");
-            v2 = parseFloat (operacion);
-            v2 = (v2 + v2);//arreglar el acumilador
+            operacion = parseFloat (operacion);
+            v2 = (v2 + operacion);
 
             
             }
             const resultado = (v2 / v1);
            
-            document.write("El promedio de las notas es: " + resultado);
-            document.write("<br>" + v2);
+            document.write("<h1>" + "El promedio de las notas es: " + resultado + "</h1>");
+            
             
 
         
