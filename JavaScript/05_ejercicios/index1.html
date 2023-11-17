@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Validar edad con If & Switch</title>
 </head>
 <body>
-    <!--Este es un documento vacio-->
+    <script>
+
+        let edad = prompt("Ingrese su edad: ");
+        edad = parseInt (edad);
+
+            if (edad >= 18){
+                switch (edad){
+
+                    case 18: 
+                        document.write("<h1>" + "Usted tiene: 18 años. Usted es mayor de edad" + "</h1>");
+                        break;
+
+                    case 19: 
+                        document.write("<h1>" + "Usted tiene: 19 años. Usted es mayor de edad" + "</h1>");
+                        break;
+
+                    case 20: 
+                        document.write("<h1>" + "Usted tiene: 20 años. Usted es mayor de edad" + "</h1>");
+                        break;
+
+                    default:
+                        document.write("<h1>" + "Su edad es: " + edad + " Puede pasar" +"</h1>");
+
+                }
+
+            }else if (edad < 18){
+
+
+                switch (edad){
+
+                case 17: 
+                    document.write("<h1>" + "Usted tiene: 17 años. Usted no puede pasar, por ser menor de edad" + "</h1>");
+                    break;
+
+                case 16: 
+                    document.write("<h1>" + "Usted tiene: 16 años. Usted no puede pasar, por ser menor de edad" + "</h1>");
+                    break;
+
+                case 15: 
+                    document.write("<h1>" + "Usted tiene: 15 años. Usted no puede pasar, por ser menor de edad" + "</h1>");
+                    break;
+
+                default:
+                    document.write("<h1>" + "Su edad es: " + edad + " No puede pasar" +"</h1>");
+
+                }
+
+            }
+        
+
+
+    </script>
 </body>
 </html>
