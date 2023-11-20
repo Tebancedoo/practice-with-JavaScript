@@ -19,5 +19,11 @@ function recuperarTitulo() {
     alert(document.getElementById("titulo1").innerText)
 }
 
+//TextContent
+/*Es una propieda que nos permite representar el contenido de un nodo y sus decendiente*/
+
+var text = Node.textContent;
+Node.textContent = string;
+
 //Funciones dom
 
