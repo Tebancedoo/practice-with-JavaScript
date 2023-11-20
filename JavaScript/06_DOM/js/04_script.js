@@ -12,6 +12,12 @@ console.log(noExiste);
 
 //Diferencia entre innerText, textContent, innerHTML con sus significados
 
+//InnerText
+/*Es una propiedad que nos permite cambiar o modificar el contenido de un elemento de texto o consultar su valor. */
+
+function recuperarTitulo() {
+    alert(document.getElementById("titulo1").innerText)
+}
 
 //Funciones dom
 
