@@ -12,5 +12,6 @@ console.log(noExiste);
 
 //Diferencia entre innerText, textContent, innerHTML con sus significados
 
+
 //Funciones dom
 
