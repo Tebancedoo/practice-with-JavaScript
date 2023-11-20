@@ -25,5 +25,17 @@ function recuperarTitulo() {
 var text = Node.textContent;
 Node.textContent = string;
 
+//InnerHTML
+/*Es una propiedad que nos deja renornar el HTML, permite leer un dato o asignarlo a contenido de un div, o bien del mismo control. Permitiendo asi asignarle valores a los controles */
+
+
+<div id ="DivContenedor"><h1>Texto inicial</h1>
+
+    
+<script>
+    var element = document.getElementById("DivContenedor");
+    element.innerHTML = "Texto final";
+</script>
+
 //Funciones dom
 
