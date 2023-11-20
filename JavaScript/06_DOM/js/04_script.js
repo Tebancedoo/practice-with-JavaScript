@@ -39,3 +39,5 @@ Node.textContent = string;
 
 //Funciones dom
 
+
+
