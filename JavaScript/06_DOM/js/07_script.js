@@ -54,8 +54,6 @@ function agregarCurso(e){
         leerDatosCurso(cursoSeleccionado);
     }
 
-    console.log('presionando el curso');
-
 }
 
 //lee contenido del HTML, al que le dimos click
@@ -72,21 +70,61 @@ const infoCurso = {
     cantidad: 1
 }
 
-//agrega elementos al arreglo de carrito
-articulosCarrito = [...articulosCarrito, infoCurso];
+//revisa si un elemento ya existe en el carrito
+const existe = articulosCarrito.som(curso => curso.id === infoCurso.id);
+if(existe){
+    const cursos = articuloCarrito.map(curso => {
+        if(curso.id === infoCurso.id){
+            curso.cantidad ++ ;
+            return curso;
+        }else{
+            return curso;
+        }
+    });
+    articulosCarrito = [...cursos]
+}else{
+
+    //agrega elementos al arreglo de carrito, agregamos elementos al carrito
+    articulosCarrito = [...articulosCarrito, infoCurso];
+    console.log(articulosCarrito);
+
+}
 
 
-console.log(articulosCarrito);
+carritoHTML();
+
+//limpiar html
+limpiarHTML();
+
 
 //muestra el carrito de compras en el html
 function carritoHTML() {
     articulosCarrito.forEach(curso => {
+        const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
-        row.innerHTML = '<td> ${curso.titulo} </td>;'
+        row.innerHTML = '
+        <td> <img src="${curso.imagen}" width="100"></td>
+         <td> ${curso.titulo} </td>;
+         <td> ${curso.precio}</td>
+         <td> ${curso.cantidad}</td>
+
+         <td>
+            <a href="#" class="borrar-curso" data-id="${id}" > </a>
+         </td>
 
         //agrega el html del carrito en el tbody
         contenedorCarrito.appendChild(row);
     });
 }
+
+//elimina los cursos del tbody
+function limpiarHTML(){
+    contenedorCarrito.innerHTML = '';
+}
+
+    while(contenedorCarrito.firstChild){
+        contenedorCarrito.remoChild(contenedorCarrito.firstChild)
+
+    }
 
 */ 
