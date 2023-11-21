@@ -71,18 +71,22 @@ const infoCurso = {
     id: curso.querySelector('a').getAttribute('data-id'),
     cantidad: 1
 }
+
+//agrega elementos al arreglo de carrito
 articulosCarrito = [...articulosCarrito, infoCurso];
 
 
 console.log(articulosCarrito);
 
+//muestra el carrito de compras en el html
 function carritoHTML() {
-    articulosCarrito.forEach(curso=>{
+    articulosCarrito.forEach(curso => {
         const row = document.createElement('tr');
         row.innerHTML = '<td> ${curso.titulo} </td>;'
 
+        //agrega el html del carrito en el tbody
         contenedorCarrito.appendChild(row);
-    })
+    });
 }
 
 */ 
