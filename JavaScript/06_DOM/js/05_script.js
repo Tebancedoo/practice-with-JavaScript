@@ -22,12 +22,5 @@ encabezado.style.textTransform= 'uppercase';
 encabezado.style.fontSize= '36px';
 
 
-//crear enlace
-const enlace = document.createElement('A');
-enlace.textContent = 'Nuevo Enlace';
-enlace.href = '/nuevo_enlace';
-console.log(enlace);
 
-
-//
 
