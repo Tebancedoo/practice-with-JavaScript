@@ -41,8 +41,20 @@ function cargarEventListeners(){
     //cuando agregar un curso "presionas el agregar"
     listaCursos.addEventListener('click', agregarCurso);
 
-}
 
+    //elimina cursos del carrito
+    carrito.addEventListener('click', eliminarCurso);
+
+    //vaciar el carrito
+    vaciarCarritoBtn.addEventListener('click' () => {
+        articulosCarrito = [];
+
+        limpiarHTML;
+    } )
+     
+
+}
+//FUNCIONES
 function agregarCurso(e){
 
     e.preventDefault();
@@ -54,6 +66,16 @@ function agregarCurso(e){
         leerDatosCurso(cursoSeleccionado);
     }
 
+}
+
+//eliminar un curso del carrito
+function elimarCurso(e){
+    if(e.target.classList.contains('borrar-curso')){
+        const cursoid = e.target.getAttribute('data-id');
+        articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
+
+        carritoHTML();
+    }
 }
 
 //lee contenido del HTML, al que le dimos click
@@ -73,6 +95,7 @@ const infoCurso = {
 //revisa si un elemento ya existe en el carrito
 const existe = articulosCarrito.som(curso => curso.id === infoCurso.id);
 if(existe){
+    //actualiza la cantidad
     const cursos = articuloCarrito.map(curso => {
         if(curso.id === infoCurso.id){
             curso.cantidad ++ ;
@@ -128,3 +151,6 @@ function limpiarHTML(){
     }
 
 */ 
+
+
+//x en el boton rojo y agragar funcionalidad carrito al proyecto
