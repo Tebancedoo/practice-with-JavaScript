@@ -22,14 +22,14 @@ function cargarEventListeners(){
         limpiarHTML();
     });
      
-}/*voy aquiiiiii */
+}
 
 //Funciones
 function agregarCurso(e){
 
     e.preventDefault();
 
-    if(e.target.classList.constains('agregar-carrito')){
+    if(e.target.classList.contains('agregar-carrito')){
         //console.log('Agregando al carrito');
         //console.log(e.target.parentElement.parentElement);
         const cursoSeleccionado = e.target.parentElement.parentElement;
@@ -37,6 +37,7 @@ function agregarCurso(e){
     }
 
 }
+/*voy aquiiiiii */
 
 //Eliminar un curso del carrito
 function elimarCurso(e){
