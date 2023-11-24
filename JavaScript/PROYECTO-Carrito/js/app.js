@@ -61,9 +61,9 @@ function leerDatosCurso(curso){
 const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
 if(existe){
     //actualiza la cantidad
-    const cursos = articuloCarrito.map(curso => {
+    const cursos = articulosCarrito.map(curso => {
         if(curso.id === infoCurso.id){
-            curso.cantidad ++ ;
+            curso.cantidad++ ;
             return curso;
         }else{
             return curso;
@@ -71,13 +71,12 @@ if(existe){
     });
     articulosCarrito = [...cursos]
 }else{
-
+    //agregamos el curso al carrito
     //agrega elementos al arreglo de carrito, agregamos elementos al carrito
     articulosCarrito = [...articulosCarrito, infoCurso];
-    console.log(articulosCarrito);
-
 }
 
+console.log(articulosCarrito);
 
 carritoHTML();
 
@@ -92,27 +91,28 @@ carritoHTML();
         cantidad: 1
     }
 
-
-//limpiar html
-limpiarHTML();
-
-
 //muestra el carrito de compras en el html
 function carritoHTML() {
+
+    //limpiar html
+    limpiarHTML();
+    
     articulosCarrito.forEach(curso => {
 
         const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
 
         row.innerHTML = '
-        <td> <img src="${curso.imagen}" width="100"> </td>
+        <td> 
+            <img src="${curso.imagen}" width="100">
+        </td>
          <td> ${curso.titulo} </td>
          <td> ${curso.precio}</td>
          <td> ${curso.cantidad}</td>
-
          <td>
             <a href="#" class="borrar-curso" data-id="${id}" > </a>
-         </td>;
+         </td>
+        ';
 
         //agrega el html del carrito en el tbody
         contenedorCarrito.appendChild(row);
@@ -121,14 +121,14 @@ function carritoHTML() {
 
 //elimina los cursos del tbody
 function limpiarHTML(){
-    contenedorCarrito.innerHTML = '';
-}
+    //forma lenta
+    //contenedorCarrito.innerHTML = '';
 
     while(contenedorCarrito.firstChild){
-        contenedorCarrito.remoChild(contenedorCarrito.firstChild)
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild)
 
     }
-
+}
 
 
 
