@@ -1,37 +1,31 @@
 //Variables
 const carrito = document.querySelector('#carrito');
-const ContenedorCarrito = documnet.querySelector('#lista-carrito tbody');
+const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const listaCursos = document.querySelector('#lista-cursos');
 let articulosCarrito = [];
 
 cargarEventListeners();
 function cargarEventListeners(){
-
     //cuando agregar un curso "presionas el agregar"
     listaCursos.addEventListener('click', agregarCurso);
-
 
     //elimina cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
 
     //vaciar el carrito
-    vaciarCarritoBtn.addEventListener('click',() => {
-
+    vaciarCarritoBtn.addEventListener('click', () => {
         articulosCarrito = [];
+
         limpiarHTML();
     });
-     
 }
 
 //Funciones
 function agregarCurso(e){
-
     e.preventDefault();
 
-    if(e.target.classList.contains('agregar-carrito')){
-        //console.log('Agregando al carrito');
-        //console.log(e.target.parentElement.parentElement);
+    if(e.target.classList.contains('agregar-carrito')){ //console.log('Agregando al carrito'); //console.log(e.target.parentElement.parentElement);
         const cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
     }
@@ -40,7 +34,7 @@ function agregarCurso(e){
 /*voy aquiiiiii */
 
 //Eliminar un curso del carrito
-function elimarCurso(e){
+function eliminarCurso(e){
     if(e.target.classList.contains('borrar-curso')){
         const cursoId = e.target.getAttribute('data-id');
 
