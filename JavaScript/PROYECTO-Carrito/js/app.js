@@ -120,4 +120,4 @@ function limpiarHTML(){
 
 
 /*voy aquiiiiii */
-//x en el boton rojo y agragar funcionalidad carrito al proyecto
+// agragar funcionalidad carrito al proyecto
