@@ -54,7 +54,7 @@ function leerDatosCurso(curso){ //console.log(curso);
         cantidad: 1
     }
 
-//revisa si un elemento ya existe en el carrito /*voy aquiiiiii */
+//revisa si un elemento ya existe en el carrito 
 const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
 if(existe){
     //Actualiza la cantidad
@@ -119,5 +119,5 @@ function limpiarHTML(){
 }
 
 
-
+/*voy aquiiiiii */
 //x en el boton rojo y agragar funcionalidad carrito al proyecto
