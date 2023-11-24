@@ -73,7 +73,7 @@ if(existe){
     articulosCarrito = [...articulosCarrito, infoCurso];
 }
 
-console.log(articulosCarrito);
+//console.log(articulosCarrito);
 
 carritoHTML();
 
