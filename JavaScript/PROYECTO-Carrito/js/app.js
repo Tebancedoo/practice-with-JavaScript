@@ -49,7 +49,6 @@ function elimarCurso(e){
         carritoHTML();
     }
 
-
 //lee contenido del HTML, al que le dimos click
 function leerDatosCurso(curso){
     //console.log(curso);
