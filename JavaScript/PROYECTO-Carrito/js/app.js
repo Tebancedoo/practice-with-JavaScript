@@ -31,7 +31,7 @@ function agregarCurso(e){
     }
 
 }
-//Eliminar un curso del carrito /*voy aquiiiiii */
+//Eliminar un curso del carrito 
 function eliminarCurso(e){
     if(e.target.classList.contains('borrar-curso')){
         const cursoId = e.target.getAttribute('data-id');
@@ -41,14 +41,20 @@ function eliminarCurso(e){
         carritoHTML();
     }
 }
+
 //lee contenido del HTML, al que le dimos click
-function leerDatosCurso(curso){
-    //console.log(curso);
+function leerDatosCurso(curso){ //console.log(curso);
 
+//crear un objeto con el cotenido del curso actual
+    const infoCurso = {
+        imagen: curso.querySelector('img').src,
+        titulo: curso.querySelector('h4').textContent,
+        precio: curso.querySelector('.precio span').textContent,
+        id: curso.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
+    }
 
-
-
-//revisa si un elemento ya existe en el carrito
+//revisa si un elemento ya existe en el carrito /*voy aquiiiiii */
 const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
 if(existe){
     //actualiza la cantidad
@@ -73,14 +79,7 @@ carritoHTML();
 
 }
 
-//crear un objeto con el cotenido del curso actual
-    const infoCurso = {
-        imagen: curso.querySelector('img').src,
-        titulo: curso.querySelector('h4').textContent,
-        precio: curso.querySelector('.precio span').textContent,
-        id: curso.querySelector('a').getAttribute('data-id'),
-        cantidad: 1
-    }
+
 
 //muestra el carrito de compras en el html
 function carritoHTML() {
