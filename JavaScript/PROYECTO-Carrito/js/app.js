@@ -98,7 +98,7 @@ function carritoHTML() {
          <td> ${curso.precio}</td>
          <td> ${curso.cantidad}</td>
          <td>
-            <a href="#" class="borrar-curso" data-id="${id}" > </a>
+            <a href="#" class="borrar-curso" data-id="${id}">X</a>
          </td>
         `;
 
