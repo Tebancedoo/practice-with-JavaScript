@@ -57,7 +57,7 @@ function leerDatosCurso(curso){ //console.log(curso);
 //revisa si un elemento ya existe en el carrito /*voy aquiiiiii */
 const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
 if(existe){
-    //actualiza la cantidad
+    //Actualiza la cantidad
     const cursos = articulosCarrito.map(curso => {
         if(curso.id === infoCurso.id){
             curso.cantidad++ ;
@@ -79,20 +79,18 @@ carritoHTML();
 
 }
 
-
-
 //muestra el carrito de compras en el html
 function carritoHTML() {
 
     //limpiar html
     limpiarHTML();
     
+    //Recorre el carrito y genera el HTML
     articulosCarrito.forEach(curso => {
 
         const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
-
-        row.innerHTML = '
+        row.innerHTML = `
         <td> 
             <img src="${curso.imagen}" width="100">
         </td>
@@ -102,7 +100,7 @@ function carritoHTML() {
          <td>
             <a href="#" class="borrar-curso" data-id="${id}" > </a>
          </td>
-        ';
+        `;
 
         //agrega el html del carrito en el tbody
         contenedorCarrito.appendChild(row);
